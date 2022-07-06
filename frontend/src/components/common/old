@@ -1,0 +1,16 @@
+style={{position: 'relative', left: '10px',top: '13px',}} - Used for spacing and stuff
+<ListItemText primary="Rating" secondary={food.rating} /> - USED FOR RATING
+<Chip sx={{ margin: 1 , p:1}} label={addon} /> - chip used for displaying info now using buttons
+
+<FormControlLabel control={<Checkbox checked={FoodTagsList[0]} onClick={setTag1((FoodTagsList[0] ? false : true))}/>} label={FoodTagsList[0]} />
+<FormControlLabel control={<Checkbox checked={FoodTagsList[1]} onClick={setTag2((FoodTagsList[1] ? false : true))}/>} label={FoodTagsList[1]} />
+<FormControlLabel control={<Checkbox checked={FoodTagsList[2]} onClick={setTag3((FoodTagsList[2] ? false : true))}/>} label={FoodTagsList[2]} />
+
+<FormControlLabel control={<Checkbox defaultChecked={tag1} onClick={setTag1((tag1 ? false : true))}/>} label={FoodTagsList[0]} />
+<FormControlLabel control={<Checkbox defaultChecked={tag2} onClick={setTag1((tag2 ? false : true))}/>} label={FoodTagsList[0]} />
+<FormControlLabel control={<Checkbox defaultChecked={tag3} onClick={setTag1((tag3 ? false : true))}/>} label={FoodTagsList[0]} />
+
+
+<FormControlLabel control={<Checkbox checked={tag1} onChange={() => {setTag1(!tag1); console.log(tag1);}}/>} label={FoodTagsList[0]} />
+                    <FormControlLabel control={<Checkbox checked={tag2} onChange={() => {setTag2(!tag2); console.log(tag2);}}/>} label={FoodTagsList[1]} />
+                    <FormControlLabel control={<Checkbox checked={tag3} onChange={() => {setTag3(!tag3); console.log(tag3);}}/>} label={FoodTagsList[2]} /> 
